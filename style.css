@@ -1,0 +1,619 @@
+/*Font file*/
+@font-face {
+    font-family: pangramFont;
+    src: url(RESOURCES/Pangram-Regular.otf);
+  }
+/*CSS resets*/
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: pangramFont;
+}
+/*---------------*/
+.lcolorred{
+    color: #ea1f24;
+}
+
+.lcolororange{
+    color:#f06622;
+}
+.lcolorgray{
+    color:#bbb;
+    /* color: #4d4d4d; */
+}
+.lcolorgrey{
+    color:#666666;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:black;
+    cursor: auto;
+}
+header{
+    background-color:black;
+    padding:2%;
+    height:auto;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+}
+
+h1 a{
+    text-decoration: none;
+    float:left;
+    cursor:pointer;
+}
+h1 a:hover{
+    opacity: 0.8;
+    transform:scale(1.1);
+}
+header ul{
+    float: right;
+}
+header li{
+    cursor:pointer;
+    list-style-type: none;
+    display: inline-block;
+    padding: 4px;
+    font-size: 1.3em;
+    position:relative;
+}
+header li a{
+    text-decoration: none;
+    color: grey;
+}
+#donatebutton{
+    border-radius: 40px;
+    border-color: #fff;
+    border-style: solid;
+}
+#donatebutton a{
+    text-decoration: none;
+    color:#fff;
+    padding: 7px;
+}
+#donatebutton a:hover{
+    text-decoration: none;
+    color:#f06622;
+    padding: 7px;
+    text-align: center;
+}
+
+#donatebutton:hover{
+    border-color: #ea1f24;
+    border-radius: 40px;
+}
+/*--------------------------*/
+  .links:hover{
+      color:#f06622
+  }
+  .links::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -5px;
+    left: 0; 
+    background-color: #ea1f24;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+    
+  }
+
+  .links:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+/*-------------------animationend ********/
+.clear{
+    clear:both;
+}
+
+main{
+    position:relative;
+    top:73px;
+    height: auto;
+    /* width:100%; */
+    background-color:black;
+}
+/*----------------banner-----------------------*/
+#banner{
+    background-color:black;
+    padding-top: 5%;
+    color:whitesmoke;
+    height: fit-content;
+    margin-left:5%;
+}
+#banner h2{
+ font-size: 2.8em;
+ font-weight: bold;
+ color:#f06622;
+ font-family: pangramFont;
+}
+#bannertext h3{
+    font-size: 2.6em;
+    font-weight: bold;
+    font-family: pangramFont;
+}
+/*----------------stories-----------------------*/
+#stories{
+    text-align: center;
+    background-color:black;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 25px;
+    color:white;
+    padding-top: 88px;
+    padding-bottom: 88px;
+    padding-left:3%;
+    padding-right:3%;
+}
+#stories h2{
+    text-align: center;
+    color:whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding:5px;
+    position: relative;
+    display: inline-block;
+}
+
+#stories h2::before{
+    content: "";
+    position: absolute;
+    /* width: 0; */
+    width:100%;
+    height: 3px;
+    bottom: 0px;
+    left: 0; 
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+    
+  }
+
+  #stories h2:hover::before {
+    visibility: visible;
+    /* width:100%; */
+    transform: scaleX(1);
+  }
+
+.highlightstories{
+    border: solid 3px #f06622;
+    margin: 0% 2.5%;
+    width:95%;
+    height:530px;
+    border-radius: 10px;
+    position:relative;
+    background-color: #000;
+    /* overflow:auto; */
+}
+#highlight1{
+    position: absolute;
+    display: inline-block;
+    left:0;
+    width:445px;
+    height:525px;
+    border-radius:10px;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius:10px; */
+}
+.highlightdetail1{
+    position: absolute;
+    top:0;
+    text-align: justify;
+    /* left: 35%; */
+    left: 445px;
+    color:#bbb;
+    padding: 2%;
+    background-color:black;
+    border-radius: 10px;
+    height:525px;
+    overflow:auto;
+}
+
+.highlightdetail1 h3{
+    font-size: 1.5em;
+    text-align: center;
+    color: #ea1f24;
+}
+.highlightdetail1 p{
+    margin-bottom: 7px;
+    font-size: 1.2em;
+}
+/* #captionh1{
+    position: absolute;
+    left:160px;
+    bottom:5px;
+    font-size: 1.6em;
+    color:white;
+    font-weight: bold;
+} */
+.flipstories{
+    padding:1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 250px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /* background-color: #bbb; */
+    color: black;
+  }
+  .flip-card-front img{
+    border-radius:10px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    padding:15px;
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    border: 1px solid #f1f1f1;
+  }
+  
+  .srole{
+      font-size:0.8em;
+      padding: 0.5%
+  }
+
+
+/*----------------stories-----------------------*/
+/*----------------mission-----------------------*/
+#mission{
+    padding: 1%;
+    background-image: linear-gradient(to  right, #ea1f24,#f06622);
+    /* background-color: #f06622; */
+    padding-top: 96px;
+    text-align: center;
+    padding-bottom: 96px;
+    padding-left: 2%;
+    padding-right:2%;
+}
+
+#mission h2{
+    text-align: center;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding:5px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+#mission h2::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 3px;
+    bottom: 0px;
+    left: 0; 
+    background-color:black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+    
+  }
+
+#mission h2:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+
+#missionleft{    
+    text-align: justify;
+    /* float:left; */
+    width:49%;
+}
+video {
+    width: 100%;
+    height: auto;
+  }
+  #missioncontent{
+      display: flex;
+  }
+  
+#missionright{
+    width:49%;
+    /* float:right; */
+    padding:0.1% 1.5%;
+}
+#missionright p{
+    color:black;
+    padding-top: 0%;
+    padding-bottom:1%;
+    padding-right: 1%;
+    font-size: 1.3em;
+    text-align: left;
+}
+.missionimp{
+    color:whitesmoke
+}
+/*--------------team---------------------*/
+#team{
+    background-color:black;
+    height: fit-content;
+    text-align: center;
+    padding-top: 70px;
+    height: fit-content;
+    padding-bottom: 70px;
+}
+#team h2{
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding:5px;
+    position: relative;
+    display: inline-block;
+}
+
+#team h2::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 3px;
+    bottom: 0px;
+    left: 0; 
+    background-color:white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+    
+  }
+
+#team h2:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+#teamdescription{
+    padding:0.5% 10% 2%;
+    font-size: 1.3em;
+    color: whitesmoke;
+    text-align: justify;
+}
+#teammembers{
+    /* padding:1% 5% 4%; */
+    background-color: black ;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tmcard{
+    /* width:320px;
+    height: 510px; */
+    width:300px;
+    height: 495px;
+    background-color:aliceblue;
+    /* background-color:black; */
+    border-radius:15px ;
+    margin: 2%;
+    position: relative;
+}
+.tmcard img{
+    position:absolute;
+    top:2px;
+    left: 2px;
+    /* left:2px; */
+    /* width:314px;
+    height: 280px; */
+    width:296px;
+    height:270px;
+    /* border-radius:15px; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.tmcard .teamheadings h3{
+    font-size: 1.7em;
+    color: black;
+    /* color: aliceblue; */
+}
+.tmcard .teamheadings h4{
+    font-size: 1.3em;
+    color: grey;
+}
+.tmcard .teamheadings p{
+    text-align: center;
+    font-weight: 100;
+    padding:8px;
+}
+.teamheadings{
+    position:absolute;
+    top:286px;
+    left:3px;
+    /* width:314px; */
+    height:fit-content;
+    text-align: center;
+}
+#instaiconteam{
+    display: inline-block;
+    width:45px;
+    height:45px;
+    background: url("RESOURCES/icons8-instagram-45.png");
+}
+#instaiconteam:hover{
+    transform: scale(1.2);
+    
+}
+.linkediniconteam{
+    display: inline-block;
+    width:45px;
+    height:45px;
+    background: url("RESOURCES/icons8-linkedin-45.png");
+}
+.linkediniconteam:hover{
+    transform: scale(1.2);
+}
+/*--------------teamend---------------------*/
+/*--------------donate-----------------------*/
+#donate{
+    /* background-color:#f06622; */
+    background-image: linear-gradient(to  right, #ea1f24,#f06622);
+    text-align: center;
+    height:fit-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#donate h2{
+    text-align: center;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-top: 20px;
+    padding:5px;
+    position: relative;
+    display: inline-block;
+}
+
+#donate h2::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 3px;
+    bottom: 0px;
+    left: 0; 
+    background-color:black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+    
+  }
+
+#donate h2:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+.donatecontent{
+    padding:0.5% 15% 2%;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+#donate a{
+    text-align: center;
+    color: #fff;
+    border: solid 3px #fff;
+    border-radius: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    padding:7px;  
+}
+
+#donate a:hover{
+    transition: all 0.25s ease-out;
+    box-shadow: 2px 3px #fff;
+}
+
+/*-------------donateend---------------------*/
+/*----------------- footer ----------------- */
+footer{
+    width: 100%;
+    height: auto;
+    background-color:black;
+    display:flex;
+    justify-content: space-between;
+    text-align: right;
+    /* padding-top: 8px;
+    padding-left: 2%;
+    padding-right: 2%; */
+    padding: 1% 2%;
+    color:#f06622;
+}
+
+footer li{
+    list-style-type: none;
+    display: inline;
+}
+footer a{
+    text-decoration: none;
+}
+
+#flinks a{
+    color: #f06622;
+}
+#flinks a:hover{
+    color: #ea1f24;
+}
+
+#gmailicon{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background: url("RESOURCES/gmailcustomicon1.png");
+    
+}
+#gmailicon:hover{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background: url("RESOURCES/gmailcustomicon2.png");
+}
+#instaicon{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background: url("RESOURCES/instacustomicon1.png");
+}
+#instaicon:hover{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background: url("RESOURCES/instacustomicon2.png");
+}
+
+footer p{
+    padding-top: 1.5%;
+    color:#f06622;
+    font-size: 15px;;
+}
